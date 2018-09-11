@@ -8,30 +8,30 @@ public class App
     	Graph <Character, Integer> mapa = new Graph<Character, Integer>("Guía Roji");
         
         /* Crear vértices */
-        Vertex<Character, Integer>  A = new Vertex<Character, Integer>('A');
-        Vertex<Character, Integer>  B = new Vertex<Character, Integer>('B');
-        Vertex<Character, Integer>  C = new Vertex<Character, Integer>('C');
-        Vertex<Character, Integer>  D = new Vertex<Character, Integer>('D');
-        Vertex<Character, Integer>  E = new Vertex<Character, Integer>('E');
+        Vertex<Character, Integer>  a = new Vertex<Character, Integer>('A');
+        Vertex<Character, Integer>  b = new Vertex<Character, Integer>('B');
+        Vertex<Character, Integer>  c = new Vertex<Character, Integer>('C');
+        Vertex<Character, Integer>  d = new Vertex<Character, Integer>('D');
+        Vertex<Character, Integer>  e = new Vertex<Character, Integer>('E');
         
         /* Adicionar vértices al grafo */
-        mapa.addVertex(A);
-        mapa.addVertex(B);
-        mapa.addVertex(C);
-        mapa.addVertex(D);
-        mapa.addVertex(E);
+        mapa.addVertex(a);
+        mapa.addVertex(b);
+        mapa.addVertex(c);
+        mapa.addVertex(d);
+        mapa.addVertex(e);
         
         /* Adicionar aristas */
-        mapa.addEdge(A, B, 30);
-        mapa.addEdge(A, E, 100);
-        mapa.addEdge(B, A, 50);
-        mapa.addEdge(B, D, 75);
-        mapa.addEdge(C, D, 20);
-        mapa.addEdge(D, B, 60);
-        mapa.addEdge(E, C, 15);
+        mapa.addEdge(a, b, 30);
+        mapa.addEdge(a, e, 100);
+        mapa.addEdge(b, a, 50);
+        mapa.addEdge(b, d, 75);
+        mapa.addEdge(c, d, 20);
+        mapa.addEdge(d, b, 60);
+        mapa.addEdge(e, c, 15);
         
-        /* Eliminar una arista */;
-        mapa.removeEdge(A, B, 30);
+        /* Eliminar una arista */
+        mapa.removeEdge(a, b, 30);
         
         /* Mostrar el grafo */
         mapa.imprime();
