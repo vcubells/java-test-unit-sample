@@ -18,3 +18,11 @@ before_script:
   - ./cc-test-reporter before-build
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+addons:
+  sonarcloud:
+    organization: "vcubells-github" # the key of the org you chose at step #3
+    #token:
+    #  secure: ********* # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
